@@ -114,5 +114,18 @@ public class BookingServiceImpl implements IBookingService{
         return BookingMapper.toDTO(bookingEntityDao.save(booking));
     }
 
+    @Override
+    public BookingDTO updateBooking(BookingDTO dto) {
+
+        BookingEntity booking = bookingEntityDao.findById(dto.getId())
+                .orElseThrow(() -> new RuntimeException("Booking not found"));
+
+        booking.setStatus(dto.getStatus());
+
+        BookingEntity updated = bookingEntityDao.save(booking);
+
+        return BookingMapper.toDTO(updated);
+    }
+
 
 }

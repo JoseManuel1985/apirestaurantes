@@ -35,4 +35,5 @@ public interface IBookingEntityDao extends CrudRepository<BookingEntity, Integer
      */
     List<BookingEntity> findByUserEmail(String email);
 
+
 }

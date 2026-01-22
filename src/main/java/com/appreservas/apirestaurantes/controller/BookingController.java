@@ -87,4 +87,14 @@ public class BookingController {
     public BookingDTO createBooking(@RequestBody @Valid CreateBookingDTO bookingDTO) {
         return bookingService.createBooking(bookingDTO);
     }
+
+    @PutMapping("/{id}")
+    public BookingDTO updateBooking(
+            @PathVariable Integer id,
+            @RequestBody @Valid BookingDTO bookingDTO
+    ) {
+        bookingDTO.setId(id);
+        return bookingService.updateBooking(bookingDTO);
+    }
+
 }

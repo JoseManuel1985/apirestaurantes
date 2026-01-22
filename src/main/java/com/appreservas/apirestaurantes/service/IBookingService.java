@@ -24,4 +24,6 @@ public interface IBookingService {
 
     /** Crea una nueva reserva */
     BookingDTO createBooking(CreateBookingDTO dto);
+
+    BookingDTO updateBooking(BookingDTO dto);
 }
