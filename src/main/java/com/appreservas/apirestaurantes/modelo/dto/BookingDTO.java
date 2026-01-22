@@ -33,7 +33,7 @@ public class BookingDTO {
 
     /** Fecha de la reserva - debe ser futura */
     @NotNull(message = "La fecha es obligatoria")
-    @Future(message = "La fecha debe ser futura")
+    @FutureOrPresent(message =  "La fecha debe ser hoy o futura")
     private LocalDate date;
 
     /** Hora de la reserva en formato HH:mm */
