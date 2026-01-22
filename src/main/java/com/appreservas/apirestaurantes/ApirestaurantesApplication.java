@@ -2,6 +2,7 @@ package com.appreservas.apirestaurantes;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
 
 /**
  * Clase principal de la aplicación API REST de Restaurantes
@@ -19,6 +20,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @version 0.0.1-SNAPSHOT
  */
 @SpringBootApplication
+@EntityScan(basePackages = "com.appreservas.apirestaurantes.modelo.entity")
 public class ApirestaurantesApplication {
 
 	/**
